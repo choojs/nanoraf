@@ -26,11 +26,16 @@ function updateState (state) {
 ```
 
 ## API
-### frame = nanoraf(render)
+### frame = nanoraf(render, raf?)
 Wrap a `render` function that is called on every `raf` tick. If no new state is
 available, it will not tick. Passes the last version of the state on every tick.
 
-### frame(state)
+Optionally, provide an implementation of `requestAnimationFrame` via the
+`raf` parameter (for example, the one provided by the [raf
+package](https://www.npmjs.com/package/raf)).  If omitted, `raf` defaults to
+`window.requestAnimationFrame`.
+
+### frame(state, prevState)
 Pass new state into the render function, to be called on a new tick.
 
 ## Installation
