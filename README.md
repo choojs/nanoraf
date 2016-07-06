@@ -31,7 +31,7 @@ Wrap a `render` function that is called on every `raf` tick. If no new state is
 available, it will not tick. Passes the last version of the state on every tick.
 
 Optionally, provide an implementation of `requestAnimationFrame` via the
-optional `raf` parameter (for example, the one provided by the [raf
+`raf` parameter (for example, the one provided by the [raf
 package](https://www.npmjs.com/package/raf)).  If omitted, `raf` defaults to
 `window.requestAnimationFrame`.
 
