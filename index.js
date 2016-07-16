@@ -20,7 +20,7 @@ function nanoraf (render, raf) {
   return function frame (state, prev) {
     assert.equal(typeof state, 'object', 'nanoraf: state should be an object')
     assert.equal(typeof prev, 'object', 'nanoraf: prev should be an object')
-    assert.ifError(inRenderingTransaction, 'nanoraf: infinite loop detected')
+    assert.equal(inRenderingTransaction, false, 'nanoraf: infinite loop detected')
 
     // request a redraw for next frame
     if (currentState === null && !redrawScheduled) {
