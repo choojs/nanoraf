@@ -6,10 +6,10 @@ Only call RAF when needed.
 
 ## Usage
 ```js
-const nanoraf = require('nanoraf')
-const prev = null
+var nanoraf = require('nanoraf')
+var prev = null
 
-const frame = nanoraf(function render (state) {
+var frame = nanoraf(function render (state) {
   console.log(state.now)
 })
 

@@ -1,5 +1,5 @@
-const window = require('global/window')
-const assert = require('assert')
+var window = require('global/window')
+var assert = require('assert')
 
 module.exports = nanoraf
 
@@ -9,7 +9,7 @@ function nanoraf (render, raf) {
   assert.equal(typeof render, 'function', 'nanoraf: render should be a function')
   assert.ok(typeof raf === 'function' || typeof raf === 'undefined', 'nanoraf: raf should be a function or undefined')
 
-  if (!raf) { raf = window.requestAnimationFrame }
+  if (!raf) raf = window.requestAnimationFrame
 
   var inRenderingTransaction = false
   var redrawScheduled = false
