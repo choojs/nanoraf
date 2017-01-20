@@ -35,8 +35,8 @@ Optionally, provide an implementation of `requestAnimationFrame` via the
 package](https://www.npmjs.com/package/raf)).  If omitted, `raf` defaults to
 `window.requestAnimationFrame`.
 
-### frame(state, prevState)
-Pass new state into the render function, to be called on a new tick.
+### frame([arguments])
+Pass arguments into the render function, to be called on a new tick.
 
 ## Installation
 ```sh
