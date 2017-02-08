@@ -1,6 +1,6 @@
 {
   "name": "nanoraf",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Only call RAF when needed",
   "main": "index.js",
   "scripts": {
