@@ -9,20 +9,7 @@ test('should assert input types', function (t) {
   t.throws(nanoraf.bind(null, noop, 123), /function/)
 })
 
-test('should default to window.requestAnimationFrame', function (t) {
-  t.plan(2)
-  var currentState = { status: 'currentState' }
-  var previousState = { status: 'previousState' }
-  window.requestAnimationFrame = function (fn) { setImmediate(fn) }
-  var frame = nanoraf(render)
-  frame(currentState, previousState)
-  function render (curr, prev) {
-    t.same(curr, currentState)
-    t.same(prev, previousState)
-  }
-})
-
-test('should use custom raf if provided', function (t) {
+test('should request a frame', function (t) {
   t.plan(2)
   var currentState = { status: 'currentState' }
   var previousState = { status: 'previousState' }
