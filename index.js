@@ -1,6 +1,5 @@
 'use strict'
 
-var window = require('global/window')
 var assert = require('assert')
 
 module.exports = nanoraf
