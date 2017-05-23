@@ -9,6 +9,7 @@ module.exports = nanoraf
 function nanoraf (render, raf) {
   assert.equal(typeof render, 'function', 'nanoraf: render should be a function')
   assert.ok(typeof raf === 'function' || typeof raf === 'undefined', 'nanoraf: raf should be a function or undefined')
+  if (typeof window === 'undefined') return
 
   if (!raf) raf = window.requestAnimationFrame
   var redrawScheduled = false
