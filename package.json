@@ -3,17 +3,22 @@
   "version": "3.0.1",
   "description": "Only call RAF when needed",
   "main": "index.js",
+  "browser": {
+    "assert": "nanoassert"
+  },
   "scripts": {
-    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "deps": "dependency-check . && dependency-check . --extra --no-dev -i nanoassert",
     "test": "standard && npm run deps && NODE_ENV=test node test",
     "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
   },
-  "repository": "yoshuawuyts/nanoraf",
+  "repository": "choojs/nanoraf",
   "keywords": [
     "raf"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "nanoassert": "^1.1.0"
+  },
   "devDependencies": {
     "dependency-check": "^2.5.1",
     "global": "^4.3.1",
